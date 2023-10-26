@@ -105,7 +105,21 @@ wezterm.on("user-var-changed", function(window, pane, name, value)
 	window:set_config_overrides(overrides)
 end)
 
---
+local mux = wezterm.mux
+
+-- wezterm workspace configurations
+-- https://wezfurlong.org/wezterm/config/lua/gui-events/gui-startup.html
+wezterm.on("gui-startup", function(cmd)
+	local tab, pane, window = mux.spawn_window(cmd or {})
+	local work_tab = window:spawn_tab({ cwd = wezterm.home_dir .. "/projects/EmpowerDelivery/scratch" })
+	work_tab:set_title("Scratch")
+	local work_tree_tab = window:spawn_tab({
+		cwd = wezterm.home_dir .. "/projects/EmpowerDelivery/scratch-work-trees",
+	})
+	work_tree_tab:set_title("Work tree")
+	local notes_tab = window:spawn_tab({ cwd = wezterm.home_dir .. "/notes" })
+	notes_tab:set_title("Notes")
+end)
 
 -- and finally, return the configuration to wezterm
 return config
