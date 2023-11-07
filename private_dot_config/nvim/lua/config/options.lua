@@ -7,6 +7,6 @@ vim.o.list = true
 vim.o.lcs = "tab:> ,trail:·,eol:¬,nbsp:_"
 
 if vim.g.neovide then
-  vim.o.guifont = "BerkeleyMono Nerd Font:h16"
+  vim.o.guifont = "BerkeleyMono Nerd Font:h20"
   vim.g.neovide_cursor_vfx_mode = "railgun"
 end
