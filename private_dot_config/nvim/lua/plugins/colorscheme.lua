@@ -1,26 +1,16 @@
-if vim.g.vscode then
-  return {
-    {
-      "LazyVim/LazyVim",
-      opts = {
-        colorscheme = "",
-      },
+return {
+  {
+    "folke/tokyonight.nvim",
+    cond = not vim.g.vscode,
+    opts = {
+      style = "moon",
+      dim_inactive = true,
+      on_highlights = function(hl, c)
+        -- Make borders slightly more legible VertSplit didn't seem to do anything
+        hl.WinSeparator = {
+          fg = c.cyan,
+        }
+      end,
     },
-  }
-else
-  return {
-    {
-      "folke/tokyonight.nvim",
-      opts = {
-        style = "moon",
-        dim_inactive = true,
-        on_highlights = function(hl, c)
-          -- Make borders slightly more legible VertSplit didn't seem to do anything
-          hl.WinSeparator = {
-            fg = c.cyan,
-          }
-        end,
-      },
-    },
-  }
-end
+  },
+}

@@ -1,3 +1,12 @@
+local function remove_from_list(list, element)
+  for i, v in ipairs(list) do
+    if v == element then
+      table.remove(list, i)
+      return
+    end
+  end
+end
+
 return {
   {
     "neovim/nvim-lspconfig",
@@ -57,4 +66,12 @@ return {
       })
     end,
   },
+  -- {
+  --   "williamboman/mason.nvim",
+  --   opts = function(_, opts)
+  --     -- Remove elixirls from configurations introduced by in lazy.lua
+  --     -- { import = "lazyvim.plugins.extras.lang.elixir" },
+  --     remove_from_list(opts.ensure_installed, "elixir-ls")
+  --   end,
+  -- },
 }

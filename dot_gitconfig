@@ -14,4 +14,6 @@
   line-numbers-plus-style       = "#627259"
   line-numbers-zero-style       = "#3b4261"
 [rebase]
-	updateRefs = true
+  updateRefs = true
+[core]
+	excludesfile = /Users/blakedietz/.gitignore

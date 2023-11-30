@@ -42,7 +42,7 @@ config.color_scheme = "Tokyo Night Moon"
 config.font = wezterm.font("BerkeleyMono Nerd Font", {
 	weight = "Bold",
 })
-config.font_size = 18.0
+config.font_size = 20.0
 config.keys = {
 	{
 		key = "|",

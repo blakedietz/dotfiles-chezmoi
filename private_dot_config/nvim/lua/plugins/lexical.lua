@@ -11,7 +11,7 @@ local custom_attach = function()
 end
 
 local lexical = {
-  filetypes = { "elixir", "eelixir" },
+  filetypes = { "elixir", "eelixir", "heex" },
   cmd = { "/Users/blakedietz/projects/lexical-lsp/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
   root_dir = root_dir,
 }
