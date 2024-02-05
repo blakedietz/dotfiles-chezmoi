@@ -1,0 +1,5 @@
+theme = "tokyonight_night"
+[editor]
+line-number = "relative"
+[editor.whitespace]
+render = "all"
