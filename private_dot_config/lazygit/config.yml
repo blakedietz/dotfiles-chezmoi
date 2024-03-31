@@ -2,9 +2,11 @@ git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never
-os:
-  # Allow opening in neovim process that launched lazygit
-  editPreset: nvim-remote
+    # https://github.com/jesseduffield/lazygit/blob/fadc2893d21c798e2b64b7f7929927347cf242dd/docs/Custom_Pagers.md?plain=1#L70
+    # externalDiffCommand: difft --color=always
+# os:
+# Allow opening in neovim process that launched lazygit
+# editPreset: nvim-remote
 gui:
   # Enable nerd fonts
   nerdFontsVersion: "3"

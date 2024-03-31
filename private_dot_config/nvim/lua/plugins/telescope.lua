@@ -25,6 +25,7 @@ return {
         version = "^1.0.0",
       },
     },
+    init = function() end,
     opts = {
       defaults = {
         -- Support multi select of files from within search

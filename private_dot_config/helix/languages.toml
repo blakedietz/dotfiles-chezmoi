@@ -3,8 +3,8 @@ command = "/Users/blakedietz/projects/lexical-lsp/lexical/_build/dev/package/lex
 
 [[language]]
 name = "elixir"
-language-servers = ["lexical"]
+language-servers = ["lexical", "elixir-ls"]
 
 [[language]]
 name = "heex"
-language-servers = ["lexical"]
+language-servers = ["lexical", "elixir-ls"]

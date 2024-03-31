@@ -38,7 +38,7 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = "Tokyo Night Moon"
+config.color_scheme = "Tokyo Night"
 config.font = wezterm.font("BerkeleyMono Nerd Font", {
 	weight = "Bold",
 })
@@ -80,6 +80,7 @@ config.keys = {
 
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
+config.tab_max_width = 60
 config.window_decorations = "RESIZE"
 -- Neovim zenmode
 wezterm.on("user-var-changed", function(window, pane, name, value)
@@ -111,14 +112,19 @@ local mux = wezterm.mux
 -- https://wezfurlong.org/wezterm/config/lua/gui-events/gui-startup.html
 wezterm.on("gui-startup", function(cmd)
 	local tab, pane, window = mux.spawn_window(cmd or {})
-	local work_tab = window:spawn_tab({ cwd = wezterm.home_dir .. "/projects/EmpowerDelivery/scratch" })
-	work_tab:set_title("Scratch")
-	local work_tree_tab = window:spawn_tab({
-		cwd = wezterm.home_dir .. "/projects/EmpowerDelivery/scratch-work-trees",
-	})
-	work_tree_tab:set_title("Work tree")
+
 	local notes_tab = window:spawn_tab({ cwd = wezterm.home_dir .. "/notes" })
 	notes_tab:set_title("Notes")
+
+	local work_tree_development_tab = window:spawn_tab({
+		cwd = wezterm.home_dir .. "/projects/EmpowerDelivery/scratch",
+	})
+	work_tree_development_tab:set_title("EmpowerDelivery/scratch")
+
+	local work_tree_current_tab = window:spawn_tab({
+		cwd = wezterm.home_dir .. "/projects/EmpowerDelivery/scratch-work-tree-current",
+	})
+	work_tree_current_tab:set_title("🌳: EmpowerDelivery/scratch-worktree-current")
 end)
 
 -- and finally, return the configuration to wezterm

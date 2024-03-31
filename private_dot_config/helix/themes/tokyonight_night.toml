@@ -81,13 +81,19 @@ type = { fg = "#2ac3de" }
 "ui.text.inactive" = { fg = "#565f89", modifiers = ["italic"] }
 "ui.text.info" = { bg = "#16161e", fg = "#c0caf5" }
 "ui.virtual.inlay-hint" = { bg = "#1a2b32", fg = "#1abc9c" }
-"ui.window" = { fg = "#15161e", modifiers = ["bold"] }
 variable = { fg = "#c0caf5" }
 "variable.builtin" = { fg = "#f7768e" }
 "variable.other.member" = { fg = "#73daca" }
 "variable.parameter" = { fg = "#e0af68" }
 warning = { fg = "#e0af68" }
+
+# personalizations
+# Make the whitespace more gray
+"ui.virtual.whitespace" = { fg = "comment" }
+# Make the current visual selection match nvim
 "ui.selection.primary" = { fg = "blue", bg = "bg_visual" }
+# Make the esparator less black for better contrast
+"ui.window" = { fg = "cyan", modifiers = ["bold"] }
 
 [palette]
 bg = "#1a1b26"
