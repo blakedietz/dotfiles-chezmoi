@@ -64,11 +64,20 @@ function update_dev_tooling
     fisher update
 end
 
-function bootstrap_scratch_worktree
-    cp ../scratch/priv/repo/seeds_local.exs ./priv/repo
-    cp ../scratch/.envrc .
-    cp ../scratch/.tool-versions .
+function bootstrap_scratch_worktree -a main_worktree_path
+    cp $main_worktree_path/priv/repo/seeds_local.exs ./priv/repo
+    cp $main_worktree_path/.envrc .
+    cp $main_worktree_path/.tool-versions .
     direnv allow
     asdf install
     make dev_build
 end
+
+# function bootstrap_scratch_worktree
+#     cp ../scratch/priv/repo/seeds_local.exs ./priv/repo
+#     cp ../scratch/.envrc .
+#     cp ../scratch/.tool-versions .
+#     direnv allow
+#     asdf install
+#     make dev_build
+# end
