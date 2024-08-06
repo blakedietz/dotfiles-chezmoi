@@ -66,12 +66,21 @@ return {
       })
     end,
   },
-  -- {
-  --   "williamboman/mason.nvim",
-  --   opts = function(_, opts)
-  --     -- Remove elixirls from configurations introduced by in lazy.lua
-  --     -- { import = "lazyvim.plugins.extras.lang.elixir" },
-  --     remove_from_list(opts.ensure_installed, "elixir-ls")
-  --   end,
-  -- },
+  {
+    "williamboman/mason.nvim",
+    opts = function(_, opts)
+      -- Remove elixirls from configurations introduced by in lazy.lua
+      -- { import = "lazyvim.plugins.extras.lang.elixir" },
+      remove_from_list(opts.ensure_installed, "elixir-ls")
+    end,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = function(_, opts)
+      -- Remove elixirls from configurations introduced by in lazy.lua
+      -- { import = "lazyvim.plugins.extras.lang.elixir" },
+      opts.servers.elixirls = nil
+      return opts
+    end,
+  },
 }
