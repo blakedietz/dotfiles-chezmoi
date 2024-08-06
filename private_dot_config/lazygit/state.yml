@@ -1,17 +1,20 @@
 lastupdatecheck: 0
 recentrepos:
 - /Users/blakedietz/projects/EmpowerDelivery/scratch
-- /Users/blakedietz/projects/lexical-lsp/lexical
-- /Users/blakedietz/projects/blakedietz/vscode-snippets-liveview
 - /Users/blakedietz/projects/EmpowerDelivery/scratch-work-tree-current
 - /Users/blakedietz/Library/Mobile Documents/iCloud~md~obsidian/Documents/notes
+- /Users/blakedietz/projects/blakedietz/phoenix_new_1.17.12
 - /Users/blakedietz/projects/blakedietz/habits/app
+- /Users/blakedietz/projects/blakedietz/time-block/app
+- /Users/blakedietz/projects/blakedietz/allium58/zmk-config
+- /Users/blakedietz/projects/lexical-lsp/lexical
+- /Users/blakedietz/projects/blakedietz/qmk_firmware
+- /Users/blakedietz/.local/share/chezmoi
+- /Users/blakedietz/projects/blakedietz/vscode-snippets-liveview
 - /Users/blakedietz/.local/share/nvim/lazy/LazyVim
 - /Users/blakedietz/projects/blakedietz/zmk-config
 - /Users/blakedietz/notes
 - /Users/blakedietz/projects/EmpowerDelivery/scratch/deps/stripity_stripe
-- /Users/blakedietz/projects/blakedietz/time-block/app
-- /Users/blakedietz/.local/share/chezmoi
 - /Users/blakedietz/projects/blakedietz/mtg/app
 - /Users/blakedietz/projects/blakedietz/ecto_dev_logger
 - /Users/blakedietz/projects/blakedietz/elegy
@@ -21,7 +24,7 @@ lastversion: 0.41.0
 customcommandshistory:
 - qa
 hidecommandlog: false
-ignorewhitespaceindiffview: true
+ignorewhitespaceindiffview: false
 diffcontextsize: 3
 localbranchsortorder: recency
 remotebranchsortorder: alphabetical
