@@ -23,3 +23,13 @@ if vim.g.neovide then
   vim.keymap.set("c", "<D-v>", "<C-R>+") -- Paste command mode
   vim.keymap.set("i", "<D-v>", '<ESC>l"+Pli') -- Paste insert mode
 end
+
+-- By default LazyVim does some intelligent guessing as to whether or not a directory should be
+-- treated as a project root. For example, in phoenix projects when opening a file from the `/assets`
+-- directory, the `tailwind.config.js` file cues LazyVim in that it's a js project root. LazyVim then teats
+-- `/assets` as the project root. This means using opening telescope or neo-tree only files
+-- inside of `/assets` are visible.
+--
+-- The following configurations disables this behavior.
+-- Discussion: https://github.com/LazyVim/LazyVim/discussions/1770#discussioncomment-7304728
+vim.g.root_spec = { "cwd" }
